@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,30 +14,30 @@ const Header = () => {
   };
   
   return (
-    <header className="w-full py-4 px-4 md:px-6 lg:px-8 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-      <div className="container max-w-7xl mx-auto flex justify-between items-center">
+    <header className="w-full py-6 px-6 md:px-12 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <span className="text-2xl font-serif font-bold text-iden-purple">Iden<span className="text-xs align-super">™</span></span>
           </a>
         </div>
         
-        <nav className="hidden md:flex items-center gap-6">
-          <a href="#como-funciona" className="text-sm font-medium hover:text-iden-purple transition-colors">
-            Como Funciona
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#showcase" className="text-sm font-medium hover:text-iden-purple transition-colors">
+            Showcase
           </a>
-          <a href="#planos" className="text-sm font-medium hover:text-iden-purple transition-colors">
-            Planos
+          <a href="#processo" className="text-sm font-medium hover:text-iden-purple transition-colors">
+            Processo
           </a>
-          <a href="#marketplace" className="text-sm font-medium hover:text-iden-purple transition-colors">
-            Marketplace
+          <a href="#funcionalidades" className="text-sm font-medium hover:text-iden-purple transition-colors">
+            Funcionalidades
           </a>
-          <Button variant="outline" size="sm" className="ml-2">
-            Entrar
-          </Button>
-          <Button size="sm" className="bg-iden-purple hover:bg-iden-purple-dark text-white">
-            Criar Minha Marca
-          </Button>
+          <Link to="/briefing">
+            <Button size="sm" className="bg-iden-purple hover:bg-iden-purple-dark text-white">
+              Criar Marca
+              <ArrowRight size={16} className="ml-2" />
+            </Button>
+          </Link>
         </nav>
         
         <button 
@@ -60,34 +61,36 @@ const Header = () => {
         
         <nav className="flex flex-col gap-6">
           <a 
-            href="#como-funciona" 
+            href="#showcase" 
             className="text-lg font-medium hover:text-iden-purple transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Como Funciona
+            Showcase
           </a>
           <a 
-            href="#planos" 
+            href="#processo" 
             className="text-lg font-medium hover:text-iden-purple transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Planos
+            Processo
           </a>
           <a 
-            href="#marketplace" 
+            href="#funcionalidades" 
             className="text-lg font-medium hover:text-iden-purple transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Marketplace
+            Funcionalidades
           </a>
-          <div className="flex flex-col gap-3 mt-4">
-            <Button variant="outline" className="w-full">
-              Entrar
-            </Button>
+          <Link 
+            to="/briefing" 
+            className="mt-4"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <Button className="w-full bg-iden-purple hover:bg-iden-purple-dark text-white">
-              Criar Minha Marca
+              Criar Marca
+              <ArrowRight size={16} className="ml-2" />
             </Button>
-          </div>
+          </Link>
         </nav>
       </div>
     </header>

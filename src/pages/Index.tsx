@@ -2,9 +2,9 @@
 import React from 'react';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import HowItWorks from "@/components/HowItWorks";
-import Plans from "@/components/Plans";
-import Marketplace from "@/components/Marketplace";
+import Showcase from "@/components/Showcase";
+import ProcessSection from "@/components/ProcessSection";
+import FeatureSection from "@/components/FeatureSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -14,9 +14,9 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <HowItWorks />
-        <Plans />
-        <Marketplace />
+        <Showcase />
+        <ProcessSection />
+        <FeatureSection />
         <CTASection />
       </main>
       <Footer />

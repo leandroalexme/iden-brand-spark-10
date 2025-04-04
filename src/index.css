@@ -97,3 +97,67 @@
 .gradient-bg {
   @apply bg-gradient-to-r from-iden-purple to-blue-500;
 }
+
+/* Estilos de apresentação tipo Behance */
+.presentation-section {
+  @apply py-24 px-6 md:px-12 overflow-hidden relative;
+}
+
+.presentation-card {
+  @apply bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.presentation-image {
+  @apply rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all;
+}
+
+.caption-text {
+  @apply text-sm text-gray-500 mt-2;
+}
+
+.section-divider {
+  @apply w-16 h-1 bg-iden-purple my-8 mx-auto;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal-right {
+  animation: revealRight 1s ease-out forwards;
+}
+
+@keyframes revealRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
