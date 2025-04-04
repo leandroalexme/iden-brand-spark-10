@@ -43,12 +43,29 @@ const DesignCustomization = () => {
   };
 
   const handleFinalize = () => {
+    // Collect customization data
+    const customizationData = {
+      colors: {
+        primary: primaryColor,
+        secondary: secondaryColor,
+        accent: accentColor
+      },
+      font: selectedFont
+    };
+    
+    // Navigate to presentation page with all the data
+    navigate('/presentation', { 
+      state: { 
+        briefingData, 
+        designDirection,
+        designCustomization: customizationData
+      } 
+    });
+    
     toast({
       title: "Design finalizado!",
-      description: "Seus arquivos estão sendo preparados para download.",
+      description: "Sua identidade visual foi gerada com sucesso.",
     });
-    // Em uma implementação real, aqui enviaríamos os dados para processamento
-    // e geração dos arquivos finais
   };
 
   const handleReset = () => {
