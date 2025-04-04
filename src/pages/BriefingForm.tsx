@@ -47,17 +47,20 @@ const BriefingForm = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   
+  // Valores pré-preenchidos para o formulário
+  const defaultValues = {
+    brandName: "Iden",
+    industry: "Tecnologia",
+    targetAudience: "Profissionais de design e marketing, entre 25-45 anos, que buscam ferramentas para criar identidades visuais de forma rápida e profissional.",
+    brandValues: "Inovação, criatividade, simplicidade e profissionalismo.",
+    competitors: "Canva, Adobe Express, Looka",
+    visualPreferences: "Design clean e moderno, com uso de cores vibrantes mas sofisticadas. Tipografia clara e legível.",
+    additionalNotes: "A marca precisa transmitir confiança e modernidade.",
+  };
+  
   const form = useForm<BriefingFormValues>({
     resolver: zodResolver(briefingSchema),
-    defaultValues: {
-      brandName: "",
-      industry: "",
-      targetAudience: "",
-      brandValues: "",
-      competitors: "",
-      visualPreferences: "",
-      additionalNotes: "",
-    },
+    defaultValues,
   });
 
   function onSubmit(data: BriefingFormValues) {
@@ -75,18 +78,18 @@ const BriefingForm = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow py-12 px-4 bg-gray-50">
+      <main className="flex-grow py-6 px-4 bg-gray-50">
         <div className="container max-w-3xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-sm">
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-serif font-bold mb-4">Briefing de Marca</h1>
+            <div className="text-center mb-6">
+              <h1 className="text-3xl font-serif font-bold mb-2">Briefing de Marca</h1>
               <p className="text-gray-600">
                 Conte-nos sobre sua marca para que possamos criar uma identidade visual perfeita para o seu negócio.
               </p>
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="brandName"
@@ -124,7 +127,7 @@ const BriefingForm = () => {
                       <FormControl>
                         <Textarea 
                           placeholder="Descreva quem é seu cliente ideal (idade, interesses, comportamentos)" 
-                          className="min-h-[100px]" 
+                          className="min-h-[80px]" 
                           {...field} 
                         />
                       </FormControl>
@@ -142,7 +145,7 @@ const BriefingForm = () => {
                       <FormControl>
                         <Textarea 
                           placeholder="Quais são os principais valores que sua marca representa?" 
-                          className="min-h-[100px]" 
+                          className="min-h-[80px]" 
                           {...field} 
                         />
                       </FormControl>
@@ -174,7 +177,7 @@ const BriefingForm = () => {
                       <FormControl>
                         <Textarea 
                           placeholder="Descreva o estilo visual que você prefere (moderno, minimalista, vintage, etc)" 
-                          className="min-h-[100px]" 
+                          className="min-h-[80px]" 
                           {...field} 
                         />
                       </FormControl>
@@ -192,7 +195,7 @@ const BriefingForm = () => {
                       <FormControl>
                         <Textarea 
                           placeholder="Alguma informação adicional que gostaria de compartilhar?" 
-                          className="min-h-[100px]" 
+                          className="min-h-[80px]" 
                           {...field} 
                         />
                       </FormControl>
@@ -201,7 +204,7 @@ const BriefingForm = () => {
                   )}
                 />
                 
-                <div className="pt-4">
+                <div className="pt-3">
                   <Button 
                     type="submit" 
                     className="w-full bg-iden-purple hover:bg-iden-purple-dark text-white" 
