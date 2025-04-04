@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Canvas, IEvent, loadSVGFromURL } from 'fabric';
+import { Canvas, TEvent, Rect, Text, Circle, Line } from 'fabric';
 
 interface DesignEditorProps {
   brandName: string;
@@ -70,7 +70,7 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     // Adicionar elementos para o design contemporâneo
     
     // Elemento base
-    const rect = new fabric.Rect({
+    const rect = new Rect({
       left: 50,
       top: 150,
       width: 500,
@@ -81,7 +81,7 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     });
     
     // Texto do nome da marca
-    const text = new fabric.Text(brandName, {
+    const text = new Text(brandName, {
       left: 300,
       top: 190,
       fill: secondaryColor,
@@ -92,7 +92,7 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     });
     
     // Elemento decorativo
-    const circle = new fabric.Circle({
+    const circle = new Circle({
       left: 100,
       top: 200,
       radius: 30,
@@ -108,7 +108,7 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     // Adicionar elementos para um design clássico
     
     // Moldura ornamentada
-    const rect = new fabric.Rect({
+    const rect = new Rect({
       left: 50,
       top: 100,
       width: 500,
@@ -119,19 +119,19 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     });
     
     // Linha decorativa superior
-    const line1 = new fabric.Line([100, 130, 500, 130], {
+    const line1 = new Line([100, 130, 500, 130], {
       stroke: accentColor,
       strokeWidth: 2,
     });
     
     // Linha decorativa inferior
-    const line2 = new fabric.Line([100, 270, 500, 270], {
+    const line2 = new Line([100, 270, 500, 270], {
       stroke: accentColor,
       strokeWidth: 2,
     });
     
     // Texto do nome da marca
-    const text = new fabric.Text(brandName, {
+    const text = new Text(brandName, {
       left: 300,
       top: 200,
       fill: primaryColor,
@@ -149,7 +149,7 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     // Adicionar elementos para um design minimalista
     
     // Texto do nome da marca
-    const text = new fabric.Text(brandName, {
+    const text = new Text(brandName, {
       left: 300,
       top: 200,
       fill: primaryColor,
@@ -160,7 +160,7 @@ export const DesignEditor: React.FC<DesignEditorProps> = ({
     });
     
     // Linha simples
-    const line = new fabric.Line([200, 250, 400, 250], {
+    const line = new Line([200, 250, 400, 250], {
       stroke: accentColor,
       strokeWidth: 1,
     });
