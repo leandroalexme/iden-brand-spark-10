@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -15,9 +16,15 @@ const CTASection = () => {
           Nossa IA está pronta para criar uma identidade única e memorável para o seu negócio.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-iden-purple hover:bg-iden-purple-dark text-white">
-            Começar agora
-            <ArrowRight size={18} className="ml-2" />
+          <Button 
+            size="lg" 
+            className="bg-iden-purple hover:bg-iden-purple-dark text-white"
+            asChild
+          >
+            <Link to="/briefing">
+              Começar agora
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
           </Button>
           <Button size="lg" variant="outline">
             Agendar demonstração
