@@ -16,18 +16,18 @@ const Index = () => {
         <section className="py-20 px-4 bg-white relative overflow-hidden">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-              Identidade visual para sua marca em minutos
+              Identidade visual em minutos
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-              Nossa IA cria uma identidade visual profissional e exclusiva com base no seu briefing, 
-              sem necessidade de conhecimentos em design.
+              Nossa IA cria uma identidade visual profissional e exclusiva instantaneamente,
+              sem conhecimentos em design.
             </p>
             <Link to="/briefing">
               <Button 
                 size="lg" 
                 className="bg-iden-purple hover:bg-iden-purple-dark text-white"
               >
-                Comece agora
+                Começar agora
                 <ArrowRight size={18} className="ml-2" />
               </Button>
             </Link>
@@ -39,10 +39,10 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-                Identidade visual completa em poucos cliques
+                Identidade visual completa
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Responda um briefing e nossa IA gera todos os materiais necessários para sua marca
+                Todos os materiais que sua marca precisa, gerados em segundos
               </p>
             </div>
             
@@ -55,7 +55,7 @@ const Index = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">Logo Profissional</h3>
-                  <p className="text-gray-600">Logotipos criados especificamente para representar sua marca e seus valores</p>
+                  <p className="text-gray-600">Logotipos exclusivos que representam sua marca e seus valores</p>
                 </div>
               </div>
               
@@ -71,8 +71,8 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Materiais Gráficos</h3>
-                  <p className="text-gray-600">Cartões de visita, papelaria e outros materiais essenciais para sua marca</p>
+                  <h3 className="text-xl font-bold mb-2">Papelaria Completa</h3>
+                  <p className="text-gray-600">Cartões, papel timbrado, envelopes e outros materiais essenciais</p>
                 </div>
               </div>
               
@@ -88,8 +88,8 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Sistema Visual Completo</h3>
-                  <p className="text-gray-600">Paletas de cores, tipografia e elementos de design para uma marca coesa</p>
+                  <h3 className="text-xl font-bold mb-2">Identidade Completa</h3>
+                  <p className="text-gray-600">Paletas de cores, tipografia e elementos para uma marca consistente</p>
                 </div>
               </div>
             </div>
@@ -103,10 +103,10 @@ const Index = () => {
         <section className="py-16 px-4 bg-iden-purple text-white">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-              Pronto para transformar sua marca?
+              Sua marca, pronta para o mundo
             </h2>
             <p className="text-xl opacity-80 max-w-2xl mx-auto mb-8">
-              Em poucos minutos, você terá uma identidade visual profissional e personalizada.
+              Em poucos minutos, você terá uma identidade visual profissional para usar onde quiser.
             </p>
             <Link to="/briefing">
               <Button 
