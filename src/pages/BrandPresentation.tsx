@@ -565,9 +565,7 @@ const BrandPresentation = () => {
                             style={{backgroundColor: designCustomization?.colors?.primary || "#9b87f5"}}
                           >
                             <div className="flex items-center gap-4">
-                              <div 
-                                className="w-16 h-16 rounded-full bg-white flex items-center justify-center"
-                              >
+                              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
                                 <span 
                                   className="text-2xl font-bold"
                                   style={{color: designCustomization?.colors?.primary || "#9b87f5"}}
@@ -639,9 +637,8 @@ const BrandPresentation = () => {
                           </div>
                           <div className="space-y-2">
                             <div 
-                              className="w-full aspect-square rounded-md shadow-sm"
+                              className="w-full aspect-square rounded-md shadow-sm border"
                               style={{backgroundColor: designCustomization?.colors?.secondary || "#ffffff"}}
-                              className="border"
                             ></div>
                             <p className="text-xs text-center font-mono uppercase">{designCustomization?.colors?.secondary || "#ffffff"}</p>
                           </div>

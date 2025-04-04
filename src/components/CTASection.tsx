@@ -15,7 +15,7 @@ const CTASection = () => {
           <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
             Identidade visual e verbal completa, gerada por IA e pronta para uso.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <Link to="/briefing">
               <Button 
                 size="lg" 
@@ -23,6 +23,15 @@ const CTASection = () => {
               >
                 Criar minha marca
                 <ArrowRight size={18} className="ml-2" />
+              </Button>
+            </Link>
+            <Link to="/marketplace">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
+                Explorar modelos
               </Button>
             </Link>
           </div>
