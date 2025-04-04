@@ -17,6 +17,8 @@ import {
 import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 // Esquema de validação do formulário
 const briefingSchema = z.object({
@@ -42,6 +44,9 @@ const briefingSchema = z.object({
 type BriefingFormValues = z.infer<typeof briefingSchema>;
 
 const BriefingForm = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  
   const form = useForm<BriefingFormValues>({
     resolver: zodResolver(briefingSchema),
     defaultValues: {
@@ -57,8 +62,14 @@ const BriefingForm = () => {
 
   function onSubmit(data: BriefingFormValues) {
     console.log(data);
-    // Aqui você pode adicionar a lógica para enviar os dados para o backend
-    // ou salvar no localStorage e redirecionar para a próxima etapa
+    
+    toast({
+      title: "Briefing recebido!",
+      description: "Nossa IA está gerando direções de design para sua marca."
+    });
+    
+    // Redirecionar para a página de direções de design com os dados do briefing
+    navigate('/design-directions', { state: { briefingData: data } });
   }
 
   return (

@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import BriefingForm from "./pages/BriefingForm";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import DesignDirections from "./pages/DesignDirections";
+import DesignCustomization from "./pages/DesignCustomization";
 import "./App.css";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/briefing" element={<BriefingForm />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/design-directions" element={<DesignDirections />} />
+          <Route path="/customization" element={<DesignCustomization />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
