@@ -6,15 +6,14 @@ import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-6 md:px-12 bg-iden-purple text-white">
+    <section className="py-16 px-6 md:px-12 bg-iden-purple text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
-            Transforme sua marca agora
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
+            Sua marca profissional em minutos
           </h2>
-          <p className="text-lg opacity-80 max-w-2xl mx-auto mb-10">
-            Identidade visual profissional pronta para uso em minutos.
-            Comece agora e receba materiais prontos para sua marca.
+          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+            Identidade visual e verbal completa, gerada por IA e pronta para uso.
           </p>
           <div className="flex justify-center">
             <Link to="/briefing">
